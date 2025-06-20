@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device=device-width, initial-scale=1.0"
+        />
+        <title>Procrastination Hub Dashboard</title>
+        <link rel="stylesheet" href="../css/font.css" />
+        <link rel="stylesheet" href="../css/resonsive.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body
+        class="bg-gradient-to-br from-blue-50 to-white font-sans text-gray-800"
+    >
+        <div class="flex h-screen">
+            <!-- Sidebar -->
+            <div
+                class="w-72 bg-white/90 backdrop-blur-md shadow-2xl p-6 transition-all duration-300 hover:shadow-lg"
+            >
+                <div class="flex items-center mb-8 space-x-4">
+                    <img
+                        src="../assets/img/user.png"
+                        alt="Profile"
+                        class="rounded-full border-2 border-blue-200"
+                    />
+                    <div>
+                        <p class="text-lg font-semibold">Hablu Mia</p>
+                        <p class="text-sm text-gray-500">Student</p>
+                    </div>
+                </div>
+                <nav class="space-y-2">
+                    <a
+                        href="./dashboard.html"
+                        class="block py-3 px-4 text-blue-600 bg-blue-100/80 rounded-lg hover:bg-blue-200 transition"
+                        >Dashboard</a
+                    >
+                    <a
+                        href="./actionplan.html"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Action Plan</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Skill Development</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Career</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Outfit</a
+                    >
+                    <a
+                        href="./health.html"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Health</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Entertainment</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Study Together</a
+                    >
+                    <a
+                        href="./aria.html"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Aria Ai</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Finance</a
+                    >
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 p-8 overflow-y-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <h1 class="text-3xl font-extrabold text-gray-900">
+                        Dashboard
+                    </h1>
+                    <div class="flex items-center space-x-4">
+                        <img
+                            src="../assets/img/Flag.png"
+                            alt="Flag"
+                            class="mr-2"
+                        />
+                        <select
+                            class="border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                        >
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-6 mb-8">
+                    <div
+                        class="bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-lg transform hover:scale-105 transition"
+                    >
+                        <p class="text-gray-600">CGPA</p>
+                        <p class="text-3xl font-bold text-blue-700">3.00</p>
+                        <p class="text-green-600 text-sm">
+                            +4.2% Up previous semester
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-lg transform hover:scale-105 transition"
+                    >
+                        <p class="text-gray-600">BMI</p>
+                        <p class="text-3xl font-bold text-blue-700">22.5</p>
+                        <p class="text-green-600 text-sm">
+                            +15.39% Up past Month
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-lg transform hover:scale-105 transition"
+                    >
+                        <p class="text-gray-600">Total Ran</p>
+                        <p class="text-3xl font-bold text-blue-700">69 km</p>
+                        <p class="text-red-600 text-sm">
+                            ▼ 4.17% Previous Month
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Engagement Chart -->
+                <div
+                    class="bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-lg mb-8"
+                >
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-semibold text-gray-900">
+                            Regular Engagement
+                        </h2>
+                        <select
+                            class="border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                        >
+                            <option>October</option>
+                        </select>
+                    </div>
+                    <canvas id="engagementChart" class="w-full h-40"></canvas>
+                </div>
+
+                <!-- Completed Courses -->
+                <div
+                    class="bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-lg mb-8"
+                >
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-semibold text-gray-900">
+                            Completed Courses
+                        </h2>
+                        <select
+                            class="border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                        >
+                            <option>October</option>
+                        </select>
+                    </div>
+                    <table class="w-full">
+                        <tr class="text-gray-600">
+                            <th class="py-3 px-4 text-left">Course Name</th>
+                            <th class="py-3 px-4 text-left">Start Date</th>
+                            <th class="py-3 px-4 text-left">Complete Date</th>
+                            <th class="py-3 px-4 text-left">Status</th>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-4 px-4">Development Course</td>
+                            <td class="py-4 px-4">05.05.2025</td>
+                            <td class="py-4 px-4"></td>
+                            <td class="py-4 px-4">
+                                <span
+                                    class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full"
+                                    >Running</span
+                                >
+                            </td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-4 px-4">UI Course</td>
+                            <td class="py-4 px-4">17.01.2025</td>
+                            <td class="py-4 px-4">21.04.2025</td>
+                            <td class="py-4 px-4">
+                                <span
+                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full"
+                                    >Completed</span
+                                >
+                            </td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-4 px-4">UX Course</td>
+                            <td class="py-4 px-4">12.09.2024</td>
+                            <td class="py-4 px-4">19.12.2024</td>
+                            <td class="py-4 px-4">
+                                <span
+                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full"
+                                    >Completed</span
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Movies and Fun Facts -->
+                <div class="grid grid-cols-2 gap-8">
+                    <div
+                        class="bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-lg"
+                    >
+                        <h2 class="text-xl font-semibold text-gray-900 mb-6">
+                            Movies Watched
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-6">
+                                <img
+                                    src="../assets/img/st.png"
+                                    alt="Movie"
+                                    class="rounded-lg"
+                                />
+                                <div>
+                                    <p class="text-lg font-medium">
+                                        Strangers Things
+                                    </p>
+                                    <p class="text-gray-600">
+                                        IMDb Rating: 8.6/10
+                                    </p>
+                                    <p class="text-gray-600">© 1.5M views</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <img
+                                    src="../assets/img/trans.png"
+                                    alt="Movie"
+                                    class="rounded-lg"
+                                />
+                                <div>
+                                    <p class="text-lg font-medium">
+                                        Transformers 4
+                                    </p>
+                                    <p class="text-gray-600">
+                                        IMDb Rating: 7.4/10
+                                    </p>
+                                    <p class="text-gray-600">© 2.1M views</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-6">
+                                <img
+                                    src="../assets/img/vs.png"
+                                    alt="Movie"
+                                    class="rounded-lg"
+                                />
+                                <div>
+                                    <p class="text-lg font-medium">
+                                        Vinland Saga
+                                    </p>
+                                    <p class="text-gray-600">
+                                        IMDb Rating: 8.8/10
+                                    </p>
+                                    <p class="text-gray-600">© 773k views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-lg"
+                    >
+                        <h2 class="text-xl font-semibold text-gray-900 mb-6">
+                            Fun Facts Learned
+                        </h2>
+                        <ul class="space-y-4 text-gray-700">
+                            <li>
+                                Bananas are berries, but strawberries aren't
+                            </li>
+                            <li>
+                                Wombats produce cube-shaped poop, which helps
+                                prevent it from rolling away. This peculiar
+                                shape also preserves their territory
+                            </li>
+                            <li>
+                                Archaeologists have found pots of honey in
+                                ancient Egyptian tombs that are over 3,000 years
+                                old and still perfectly edible
+                            </li>
+                            <li>
+                                Two hearts pump blood to the gills, while the
+                                third pump delivers it to the rest of the body.
+                                When they swim, the heart that delivers blood to
+                                the body actually stops beating
+                            </li>
+                            <li>
+                                Sharks have been around for about 400 million
+                                years, while trees first appeared on Earth
+                                around 350 million years ago
+                            </li>
+                            <li>
+                                A day on Venus is longer than a year on Venus
+                                (it takes Venus longer to complete one rotation
+                                on its axis (243 Earth days) than it does to
+                                orbit the Sun (225 Earth days))
+                            </li>
+                            <li>
+                                Your taste buds have a lifespan of about 10 to
+                                14 days
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const ctx = document
+                .getElementById('engagementChart')
+                .getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [
+                        '01',
+                        '03',
+                        '05',
+                        '07',
+                        '09',
+                        '11',
+                        '13',
+                        '15',
+                        '17',
+                        '19',
+                        '21',
+                        '23',
+                        '25',
+                        '27',
+                        '29',
+                        '31',
+                    ],
+                    datasets: [
+                        {
+                            label: 'Engagement',
+                            data: [
+                                20, 40, 60, 80, 85, 90, 95, 100, 85, 70, 60, 50,
+                                70, 85, 90, 85,
+                            ],
+                            borderColor: '#3b82f6',
+                            fill: true,
+                            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                            tension: 0.4,
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {color: '#6b7280'},
+                        },
+                        x: {
+                            ticks: {color: '#6b7280'},
+                        },
+                    },
+                    plugins: {
+                        legend: {display: false},
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>

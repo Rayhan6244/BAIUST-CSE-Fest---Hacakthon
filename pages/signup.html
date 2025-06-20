@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Sign up for Procrastination Hub to boost your productivity!"
+        />
+        <title>Sign Up - Procrastination Hub</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body
+        class="bg-gradient-to-b from-[#e0f0ff] to-[#c2e1ff] min-h-screen flex flex-col"
+    >
+        <!-- Navbar (same as login page, with Sign Up/Log In buttons added) -->
+        <header class="bg-white shadow-sm flex justify-center">
+            <div class="w-[80%] flex justify-between items-center px-6 py-4">
+                <div class="text-xl font-semibold">
+                    <a href="../index.html">
+                        <img
+                            src="../assets/logo/logo.png"
+                            alt="Procrastination Hub Logo"
+                            class="h-10 w-auto"
+                            loading="lazy"
+                        />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Signup Section -->
+        <main class="flex-1 flex justify-center items-center py-10">
+            <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
+                <!-- Sign Up Heading -->
+                <h1
+                    class="font-[Space Grotesk] text-3xl font-bold text-blue-900 text-center mb-6"
+                >
+                    Sign Up
+                </h1>
+
+                <!-- Signup Form -->
+                <form class="space-y-4">
+                    <!-- Full Name Field -->
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Full Name"
+                            class="w-full px-4 py-2 border border-blue-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700"
+                        />
+                    </div>
+
+                    <!-- Email Address Field -->
+                    <div>
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            class="w-full px-4 py-2 border border-blue-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700"
+                        />
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="relative">
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            class="w-full px-4 py-2 border border-blue-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700"
+                        />
+                        <button
+                            type="button"
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                        >
+                            <svg
+                                class="h-5 w-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                ></path>
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                ></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="relative">
+                        <input
+                            type="password"
+                            placeholder="Confirm Password"
+                            class="w-full px-4 py-2 border border-blue-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700"
+                        />
+                        <button
+                            type="button"
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                        >
+                            <svg
+                                class="h-5 w-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                ></path>
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                ></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Social Login Buttons -->
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <!-- Google Button -->
+                        <button
+                            type="button"
+                            class="flex items-center justify-center w-10 h-10 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 transition"
+                        >
+                            <img
+                                src="https://www.google.com/favicon.ico"
+                                alt="Google Icon"
+                                class="h-6 w-6"
+                            />
+                        </button>
+                        <!-- Facebook Button -->
+                        <button
+                            type="button"
+                            class="flex items-center justify-center w-10 h-10 bg-white border border-gray-300 rounded-full shadow hover:bg-gray-100 transition"
+                        >
+                            <img
+                                src="https://www.facebook.com/favicon.ico"
+                                alt="Facebook Icon"
+                                class="h-6 w-6"
+                            />
+                        </button>
+                    </div>
+
+                    <!-- Terms and Privacy Policy Checkbox -->
+                    <div class="flex items-center space-x-2">
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                        />
+                        <label for="terms" class="text-gray-700">
+                            I agree to Terms and conditions &amp; Privacy Policy
+                        </label>
+                    </div>
+
+                    <!-- Register Button -->
+                    <a href="./dashboard.html" target="_blank">
+                        <button
+                            class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium shadow hover:bg-blue-700 transition mt-4"
+                        >
+                            Register
+                        </button></a
+                    >
+                </form>
+
+                <!-- Links -->
+                <div class="text-center mt-4">
+                    <p class="text-gray-700">
+                        Already have an account?
+                        <a href="./signin.html" class="text-blue-600 hover:underline"
+                            >Log in</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Procrastination Hub Dashboard - Health</title>
+        <link rel="stylesheet" href="../css/font.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="../js/fetch.js"></script>
+        <script src="../js/bmi.js"></script>
+    </head>
+    <body
+        class="bg-gradient-to-br from-blue-50 to-white font-sans text-gray-800"
+    >
+        <div class="flex h-screen">
+            <!-- Sidebar -->
+            <div
+                class="w-72 bg-white/90 backdrop-blur-md shadow-2xl p-6 transition-all duration-300 hover:shadow-lg"
+            >
+                <div class="flex items-center mb-8 space-x-4">
+                    <img
+                        src="../assets/img/user.png"
+                        alt="Profile"
+                        class="rounded-full border-2 border-blue-200"
+                    />
+                    <div>
+                        <p class="text-lg font-semibold">Hablu Mia</p>
+                        <p class="text-sm text-gray-500">Student</p>
+                    </div>
+                </div>
+                <nav class="space-y-2">
+                    <a
+                        href="./dashboard.html"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Dashboard</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Action Plan</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Skill Development</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Career</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Outfit</a
+                    >
+                    <a
+                        href="./health.html"
+                        class="block py-3 px-4 text-blue-600 bg-blue-100/80 rounded-lg hover:bg-blue-200 transition"
+                        >Health</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Entertainment</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Study Together</a
+                    >
+                    <a
+                        href="./aria.html"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Aria Ai</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Finance</a
+                    >
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 p-8 overflow-y-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <h1 class="text-3xl font-extrabold text-gray-900">
+                        Health
+                    </h1>
+                    <div class="flex items-center space-x-4">
+                        <img
+                            src="../assets/img/Flag.png"
+                            alt="Flag"
+                            class="mr-2"
+                        />
+                        <select
+                            class="border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                        >
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="flex space-x-4 mb-8">
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">
+                        Marathon & Gyms
+                    </button>
+                </div>
+
+                <!-- Upcoming Marathons -->
+                <section id="upcoming-marathon" class="bg-blue-50/80 mb-10">
+                    <h2 class="text-xl font-bold">Upcoming Marathon</h2>
+                    <div class="space-y-4"></div>
+                    <!-- JS will update this -->
+                </section>
+
+                <!-- Top Participants -->
+                <div class="bg-blue-50/80 p-6 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">
+                        Nearby Gym Bros
+                    </h2>
+                    <div class="space-y-4">
+                        <div
+                            class="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+                        >
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-600">01</span>
+                                <span class="text-gray-600"
+                                    >Rahique - Comilla</span
+                                >
+                                <span class="text-gray-600">5'6"</span>
+                                <span class="text-gray-600">70kg</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-500 text-sm"
+                                    >Posted 1 hour ago</span
+                                >
+                                <button
+                                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+                                >
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+                        >
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-600">02</span>
+                                <span class="text-gray-600"
+                                    >Tanbin - Comilla</span
+                                >
+                                <span class="text-gray-600">5'6"</span>
+                                <span class="text-gray-600">90kg</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-500 text-sm"
+                                    >Posted 1 hour ago</span
+                                >
+                                <button
+                                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+                                >
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+                        >
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-600">03</span>
+                                <span class="text-gray-600"
+                                    >Rayhan - Comilla</span
+                                >
+                                <span class="text-gray-600">5'8"</span>
+                                <span class="text-gray-600">65kg</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-500 text-sm"
+                                    >Posted 1 hour ago</span
+                                >
+                                <button
+                                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+                                >
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+                        >
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-600">04</span>
+                                <span class="text-gray-600"
+                                    >Sokhina - Comilla</span
+                                >
+                                <span class="text-gray-600">5'4"</span>
+                                <span class="text-gray-600">54kg</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-500 text-sm"
+                                    >Posted 1 hour ago</span
+                                >
+                                <button
+                                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+                                >
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+                        >
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-600">05</span>
+                                <span class="text-gray-600"
+                                    >Firoz - Comilla</span
+                                >
+                                <span class="text-gray-600">5'7"</span>
+                                <span class="text-gray-600">62kg</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-gray-500 text-sm"
+                                    >Posted 1 hour ago</span
+                                >
+                                <button
+                                    class="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300"
+                                >
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nearby Gyms and BMI -->
+                <div class="grid grid-cols-2 gap-8 mb-8">
+                    <div class="bg-blue-50/80 p-6 rounded-xl shadow-lg">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">
+                            Nearby Gyms
+                        </h2>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.7781534262143!2d91.17113807595343!3d23.460680778873548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37543e8eb41a6993%3A0x66473f872f024ca3!2sCumilla!5e0!3m2!1sen!2sbd!4v1714900700794!5m2!1sen!2sbd"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        >
+                        </iframe>
+                    </div>
+                    <div class="bg-blue-50/80 p-6 rounded-xl shadow-lg">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">
+                            BMI
+                        </h2>
+                        <div
+                            id="bmi-update"
+                            class="flex justify-center mb-4"
+                        ></div>
+                        <div class="flex space-x-4 mb-4">
+                            <input
+                                type="text"
+                                placeholder="Height (cm)"
+                                class="w-full border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Weight (kg)"
+                                class="w-full border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                        <button
+                            class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                        >
+                            Calculate
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Total Run -->
+                <div class="bg-blue-50/80 p-6 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">
+                        Run
+                    </h2>
+                    <div class="flex items-center space-x-4">
+                        <input
+                            type="text"
+                            placeholder="Total Ran (km)"
+                            class="w-full border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                        />
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                        >
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

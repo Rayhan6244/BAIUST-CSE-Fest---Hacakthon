@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Procrastination Hub - Aria AI Chatbot</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body
+        class="bg-gradient-to-br from-blue-50 to-white font-sans text-gray-800"
+    >
+        <div class="flex h-screen">
+            <!-- Sidebar -->
+            <div
+                class="w-72 bg-white/90 backdrop-blur-md shadow-2xl p-6 transition-all duration-300 hover:shadow-lg"
+            >
+                <div class="flex items-center mb-8 space-x-4">
+                    <img
+                        src="../assets/img/user.png"
+                        alt="Profile"
+                        class="w-10 h-10 rounded-full border-2 border-blue-200"
+                    />
+                    <div>
+                        <p class="text-lg font-semibold">Hablu Mia</p>
+                        <p class="text-sm text-gray-500">Student</p>
+                    </div>
+                </div>
+                <nav class="space-y-2">
+                    <a
+                        href="./dashboard.html"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Dashboard</a
+                    >
+                    <a
+                        href="./actionplan.html"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Action Plan</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Skill Development</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Career</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Outfit</a
+                    >
+                    <a
+                        href="./health.html"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Health</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Entertainment</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Study Together</a
+                    >
+                    <a
+                        href="./aria.html"
+                        class="block py-3 px-4 text-blue-600 bg-blue-100/80 rounded-lg hover:bg-blue-200 transition"
+                        >Aria AI</a
+                    >
+                    <a
+                        href="#"
+                        class="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+                        >Finance</a
+                    >
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 p-8 flex flex-col">
+                <!-- Header -->
+                <div class="flex justify-between items-center mb-8">
+                    <h1 class="text-3xl font-extrabold text-gray-900">
+                        Aria AI Chatbot
+                    </h1>
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                class="border border-gray-300 rounded-lg p-2 pl-10 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                            />
+                            <span class="absolute left-3 top-2.5 text-gray-500"
+                                >🔍</span
+                            >
+                        </div>
+                        <img
+                            src="../assets/img/Flag.png"
+                            alt="Flag"
+                            class="w-5 h-5 mr-2"
+                        />
+                        <select
+                            class="border border-gray-300 rounded-lg p-2 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                        >
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Chat Area -->
+                <div
+                    class="flex-1 bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-lg overflow-y-auto mb-6"
+                >
+                    <div class="space-y-6">
+                        <!-- Aria's Message -->
+                        <div class="flex items-start space-x-4">
+                            <img
+                                src="../assets/img/ai.png"
+                                alt="Aria"
+                                class="w-10 h-10 rounded-full border-2 border-blue-200"
+                            />
+                            <div
+                                class="bg-blue-100/80 text-gray-800 p-4 rounded-lg max-w-lg"
+                            >
+                                <p>Hi I'm Arai. How Can I help you today</p>
+                            </div>
+                        </div>
+                        <!-- User's Message -->
+                        <div class="flex items-start space-x-4 justify-end">
+                            <div
+                                class="bg-gray-100/80 text-gray-800 p-4 rounded-lg max-w-lg"
+                            >
+                                <p>Nice To meet you Aria.</p>
+                            </div>
+                            <img
+                                src="../assets/img/user.png"
+                                alt="User"
+                                class="w-10 h-10 rounded-full border-2 border-blue-200"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="flex items-center space-x-4">
+                    <input
+                        type="text"
+                        placeholder="Type your message..."
+                        class="flex-1 border border-gray-300 rounded-lg p-3 bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+                    >
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
