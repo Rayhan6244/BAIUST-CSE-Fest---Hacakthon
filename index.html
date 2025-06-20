@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Procrastination Hub</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Google Fonts for Space Grotesk and Inter -->
+        <link rel="stylesheet" href="./css/font.css" />
+    </head>
+    <body
+        class="bg-gradient-to-b from-[#e0f0ff] to-[#c2e1ff] min-h-screen flex flex-col"
+    >
+        <!-- Navbar -->
+        <header class="bg-white shadow-sm flex justify-center">
+            <div class="w-[80%] flex justify-between items-center px-6 py-4">
+                <div class="text-xl font-semibold">
+                    <img src="./assets/logo/logo.png" alt="" srcset="" />
+                </div>
+                <div class="space-x-4">
+                    <a href="./pages/signup.html">
+                        <button
+                            class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition"
+                        >
+                            Sign Up
+                        </button></a
+                    >
+                    <a
+                        href="./pages/signin.html"
+                        class="text-blue-600 font-medium hover:underline"
+                        >Log In</a
+                    >
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Section -->
+        <main
+            class="bg-[url('./assets/img/bg.png')] bg-cover bg-center flex justify-center"
+        >
+            <div
+                class="flex flex-col-reverse lg:flex-row items-center justify-center flex-1 px-6 py-10 max-w-7xl w-screen h-screen"
+            >
+                <!-- Text Content -->
+                <div class="max-w-xl">
+                    <h1
+                        class="font-[Space Grotesk] text-4xl md:text-5xl font-bold text-blue-700"
+                    >
+                        Welcome to <br />
+                        <span class="text-blue-900">Procrastination Hub!</span>
+                    </h1>
+                    <p class="mt-4 text-gray-600 text-lg">
+                        You're not lost. you're just early to productivity (we
+                        swear).<br />
+                        One click, and you'll be 1% closer to having your life
+                        together.
+                    </p>
+                    <a href="./pages/dashboard.html">
+                        <button
+                            class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium shadow hover:bg-blue-700 transition"
+                        >
+                            Get Your Life Fixed!
+                        </button></a
+                    >
+                </div>
+
+                <!-- Image Content -->
+                <div class="relative w-full max-w-xl mb-10 lg:mb-0">
+                    <!-- Placeholder for characters -->
+                    <img
+                        src="./assets/img/hero.png"
+                        alt="People Placeholder"
+                        class="w-full rounded-lg"
+                    />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
